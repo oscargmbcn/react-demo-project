@@ -1,39 +1,17 @@
+# ES2015 - ES6
+- ES5 (EcmaScript 5) és la versió suportada per la majoria de browsers.
+- Si fem el codi en ES6, cal convertir de ES6 a ES5 per a que l'aplicació pugui
+  correr en el browser.
+- Un exemple són els imports. Amb ES5 fariem `var XXX = require('xxx.js');` però
+  amb ES6 podem fer `import XXX from 'xxx';`.
 
-    ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+# NPM
+```
+npm install --save-dev babel-loader babel-core
+npm install --save-dev babel-preset-es2015
+npm install --save-dev babel-preset-react
+npm install --save-dev react react-dom
+```
 
-
-Hi there! Welcome to Cloud9!
-
-To get you started, we have created a few example applications.
-
-1) Choose the application that you want to run by selecting a language folder
-
-2) Open the file within the folder
-
-3) Follow the run instructions in the file's comments
-    
-And that's all there is to it! Just have fun. Go ahead and edit the code, 
-or add new files. It's all up to you! 
-
-Happy coding!
-The Cloud9 team
-
-P.S. Oh, one more thing: to start a new project, hop on over to your 
-dashboard (from your profile picture at the top right choose "Dashboard") 
-and hit the button labelled "Create New Workspace."
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9. 
-To watch some training videos, visit http://www.youtube.com/user/c9ide
-
-## About this demo
-
-We provide this demo workspace in order for you to experience the power of Cloud9. 
-It contains sample projects for Node.js, PHP, Python, Ruby, and HTML5.
+Sino está todo instalado mediante npm no puedes hacer los imports de react en
+las páginas.

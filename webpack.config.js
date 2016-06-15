@@ -1,7 +1,7 @@
 module.exports = {
-     entry: './html/js/react.1.js',
+     entry: './html/react-demo/js/react.1.js',
      output: {
-         path: './html/js',
+         path: './html/react-demo/js',
          filename: 'react.1.bundle.js'
      },
      module: {

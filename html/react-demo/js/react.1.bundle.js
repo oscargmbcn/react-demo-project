@@ -214,10 +214,30 @@
 
 	var process = module.exports = {};
 
-	// cached from whatever global is present so that test runners that stub it don't break things.
-	var cachedSetTimeout = setTimeout;
-	var cachedClearTimeout = clearTimeout;
+	// cached from whatever global is present so that test runners that stub it
+	// don't break things.  But we need to wrap it in a try catch in case it is
+	// wrapped in strict mode code which doesn't define any globals.  It's inside a
+	// function because try/catches deoptimize in certain engines.
 
+	var cachedSetTimeout;
+	var cachedClearTimeout;
+
+	(function () {
+	  try {
+	    cachedSetTimeout = setTimeout;
+	  } catch (e) {
+	    cachedSetTimeout = function () {
+	      throw new Error('setTimeout is not defined');
+	    }
+	  }
+	  try {
+	    cachedClearTimeout = clearTimeout;
+	  } catch (e) {
+	    cachedClearTimeout = function () {
+	      throw new Error('clearTimeout is not defined');
+	    }
+	  }
+	} ())
 	var queue = [];
 	var draining = false;
 	var currentQueue;
@@ -20465,7 +20485,7 @@
 	                { onSubmit: this.handleSubmit },
 	                _react2.default.createElement('input', { type: 'text', value: this.state.comment, onChange: this.handleChange }),
 	                _react2.default.createElement('br', null),
-	                _react2.default.createElement('input', { type: 'submit', value: 'Enviar' })
+	                _react2.default.createElement('input', { type: 'submit', value: 'Enviar comentario' })
 	            )
 	        );
 	    }

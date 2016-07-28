@@ -19,3 +19,18 @@ npm install --save-dev webpack
 
 Sino está todo instalado mediante npm no puedes hacer los imports de react en
 las páginas.
+
+# Webpack
+Hem de configurar el webpack per a fer la transpilació del `js` de tipus babel a
+javascript que es pugui executar en un navegador.
+Indiques al fitxer `webpack.config.js` de quin directori llegirà els `js` en 
+babel i a on generarà el fitxer `js` que poden interpretar els browsers.
+Per cridar al webpack fas:
+- `webpack` per generar el bundle
+- `webpack --watch` per anar mirant els fitxers i si canvien generar
+- `webpack -p` per generar el bundle minificat per producció
+- `webpack -d` per incloure els source maps (que serveix per debuggar bé)
+
+Al final això agafa la configuració del `webpack.config.js` i l'aplica.
+Sinó cal posar correctament els fitxers d'entrada i sortida en la línia de
+comandes.

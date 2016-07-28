@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oskargm/react-demo-project.git"
+    "url": "git+https://github.com/oscargmbcn/react-demo-project.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oskargm/react-demo-project/issues"
+    "url": "https://github.com/oscargmbcn/react-demo-project/issues"
   },
-  "homepage": "https://github.com/oskargm/react-demo-project#readme"
+  "homepage": "https://github.com/oscargmbcn/react-demo-project#readme"
 }
